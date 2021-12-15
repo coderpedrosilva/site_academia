@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="fontawesome/css/all.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/style.css" media="screen" />
+    <title>Site</title>
+    <!-- Fonte Awesome -->
+</head>
+<body>
+<header class="menu">
+        <nav class="">
+            <a href="index.html" class="logo"><i class="fas fa-dumbbell"></i>&nbsp Shape</a>
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="list">
+            <li><a href="index.html">HOME</a></li> 
+            <li><a href="sobre.html">SOBRE</a></li> 
+            <li><a href="servicos.html">SERVIÇOS</a></li>
+            <li><a href="galeria.html">GALERIA</a></li>
+            <li><a href="precos.html">PREÇOS</a></li>
+            <li><a class="page-atual" href="contato.html">CONTATO</a></li>
+        </ul>
+        </nav>
+</header>
+
+<div class="cabecalho">
+    <h1 class="h-cabecalho">CONTATO</h1>
+</div>
+
+<div class="container16">
+    <div class="container16a">
+        <div class="container16a-1">
+            <div class="boxc16a-a">
+            <div class="boxc16a-b">
+            <h1 class="h-c16a-a">Fale</h1><h1 class="h-c16a-b">Conosco</h1>
+            </div>
+            <p class="p-c16">
+                Entre em contato via formulário ou pelo ícone do whatsapp que retornaremos
+                e responderemos suas dúvidas!
+            </p>
+            </div>
+        </div>
+        <div class="container16a-2">
+            <form id="form_contato" action="">
+                <div class="">
+                    <div class="">
+                      <fieldset>
+                        <input name="name" type="text" class="info" id="form_nome" placeholder="Nome" required="">
+                      </fieldset>
+                    </div>
+                    <hr class="linha-formulario">
+                    <div class="">
+                      <fieldset>
+                        <input name="email" type="email" class="info" id="form_email" placeholder="E-mail" required="">
+                      </fieldset>
+                    </div>
+                    <hr class="linha-formulario">
+                    <div class="">
+                      <fieldset>
+                        <textarea name="message" rows="30" class="info" id="form_mensagem" placeholder="Mensagem" required=""></textarea>
+                      </fieldset>
+                    </div>
+                    <hr class="linha-formulario">
+                    <div class="">
+                      <fieldset>
+                        <button type="submit" class="botao" id="bt_enviar" onclick="enviarMensagem()" >ENVIAR</button>
+                      </fieldset>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+    <div class="container16b">
+        <div class="mapa">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3658.091883166871!2d-46.63155158502283!3d-23.52919743469884!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce58f4e4df85b7%3A0xc6e91eeff1ea7c49!2sLuz%2C%20S%C3%A3o%20Paulo%20-%20SP%2C%2001106-010!5e0!3m2!1spt-BR!2sbr!4v1607994560227!5m2!1spt-BR!2sbr" width="100%" height="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0"></iframe>
+        </div>
+    </div>
+</div>
+
+<footer>
+<div class="rodape">
+<div class="rodape-box">
+<div class="rodape-box-a">
+    <p class="p-rodape-a">Nosso Contato</p><br>
+    <p class="p-rodape-b"> Shape Academia</p>
+</div>
+<div class="rodape-box-a">
+    <p class="p-rodape-a">Endereço</p><br>
+    <p class="p-rodape-b"> Rua João Dias Adorno, 754<br>
+        Centro - São Paulo/SP
+    </p>
+</div>
+<div class="rodape-box-a">
+    <p class="p-rodape-a">Telefone</p><br>
+    <p class="p-rodape-b">11 4067-4660</p>
+</div>
+<div class="rodape-box-a">
+    <p class="p-rodape-a">E-mail</p><br>
+    <p class="p-rodape-b">contato@shapeacademia.com</p>
+</div>
+</div>
+</div>
+
+<hr class="linha">
+
+<div class="social-media">
+    <p class="p-social-media">© Shape 2021 - Todos os direitos reservados</p>
+    <ul class="ul-social-media">
+        <li class="li-social-media"><a class="a-social-media" href="#"><i class="fab fa-facebook-square"></i></a></li> 
+        <li class="li-social-media"><a class="a-social-media" href="#"><i class="fab fa-instagram"></i></a></li> 
+        <li class="li-social-media"><a class="a-social-media" href="#"><i class="fab fa-twitter-square"></i></a></li>
+        <li class="li-social-media"><a class="a-social-media" href="#"><i class="fab fa-linkedin"></i></a></li>
+    </ul>
+</div>
+</footer>
+
+<script src="js/mobile-navbar.js"></script>
+
+<script type="text/javascript">
+
+    $(document).ready(function (event) {
+        $("#bt_enviar").show();
+    });
+    function enviarMensagem() {
+
+        var nome = $("#form_nome").val();
+        var email = $("#form_email").val();
+        var mensagem = $("#form_mensagem").val();
+
+        var UrlDataString = '';
+        UrlDataString += '?&nome=' + nome;
+        UrlDataString += '&email=' + email;
+        UrlDataString += '&mensagem=' + mensagem;
+
+        $.ajax({
+            type: "POST",
+            dataType: "html",
+            url: "script.php",
+            data: UrlDataString,
+            beforeSend: function () {
+
+                $("#bt_enviar").html("Enviando...");
+
+            },
+            error: function () {
+                $("#bt_enviar").html("Erro ao enviar, tente novamente...");
+            },
+            success: function (data) {
+                alert(data);
+                $("#bt_enviar").html("Enviado com sucesso!");
+
+            }
+
+        });
+
+    }
+
+</script>
+
+</body>
+</html>
