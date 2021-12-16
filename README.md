@@ -1,6 +1,6 @@
 # SITE ACADEMIA
 
-Esse site foi desenvolvido codando por observação tendo um site de referência, foram utilizados HTML, CSS, Js, um pouco de PHP e Ajax, em um total de 6 telas.  
+Esse site foi desenvolvido tendo um site de referência e dessa forma criei o código do zero, da minha própria maneira. Foram utilizados HTML, CSS, Js, um pouco de PHP e Ajax, em um total de 6 telas.  
  
 ![](img-readme/foto_1.jpg)
 
