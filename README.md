@@ -24,5 +24,6 @@ Possui mobile-navbar porém a responsividade ainda não está 100%. Esse projeto
 
 - [x] Telas 
 - [x] Navegação
+- [x] Botão de Whatsapp
 - [ ] Responsividade com media queries
 - [ ] Aperfeiçoar envio de e-mail com PHP e Ajax
